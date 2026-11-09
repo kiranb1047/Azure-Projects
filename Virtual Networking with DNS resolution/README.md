@@ -15,12 +15,19 @@ This project involved setting up a virtual network for virtual machines (VMs) on
 
 - I gave each of the two virtual machines a dynamic public internet address. Additionally I assigned each virtual machine a permanent internal address on the network.
 
-- I set up a security rule to allow anyone on the internet to remotely access the virtual machines using Remote Desktop. This remote access uses port 3389.
+- I added a network security group rule that allows Remote Desktop (port 3389) to the virtual machines so I could test connectivity and name resolution. This was a short-lived lab setup. In a real environment I would not expose RDP to the whole internet.
 
 - And then leveraged Azure's "Private DNS Zone" service to establish a private DNS for the virtual network. This enables internal name resolution, allowing the VMs to find each other using custom names rather than IP addresses
 
 - And finally used Azure's "DNS Zone" service to create a public DNS zone. This allows internet access to my virtual machines by entering a custom domain name instead of a complex IP address.
+- 
+# Security note
 
+Opening port 3389 to any source is acceptable only for a temporary lab. For production I would:
+- Restrict the rule's source to specific trusted IP addresses.
+- Use Azure Bastion or a VPN instead of public RDP, or just-in-time VM access in Microsoft Defender for Cloud.
+- Use network security groups with least-privilege rules and no public IPs on VMs where possible.
+  
 # Conclusion
 
 Succesfully implemented Internal Name Resoultion and External Name resolution for the Machines on the Virtual network to make it easier to remember domain names instead of hard to remember the Internal and External IP addresses.
