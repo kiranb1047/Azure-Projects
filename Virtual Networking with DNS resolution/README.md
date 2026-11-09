@@ -28,6 +28,12 @@ Opening port 3389 to any source is acceptable only for a temporary lab. For prod
 - Use Azure Bastion or a VPN instead of public RDP, or just-in-time VM access in Microsoft Defender for Cloud.
 - Use network security groups with least-privilege rules and no public IPs on VMs where possible.
   
+  # Project background
+
+These projects are hands-on labs I completed while studying for Microsoft's AZ-104 (Azure Administrator) material. The ARM templates (files starting with `az104-`) come from the Microsoft lab content. I deployed them myself in my own Azure subscription, configured the networking, security rules and DNS, and documented the results here.
+
 # Conclusion
 
 Succesfully implemented Internal Name Resoultion and External Name resolution for the Machines on the Virtual network to make it easier to remember domain names instead of hard to remember the Internal and External IP addresses.
+
+
