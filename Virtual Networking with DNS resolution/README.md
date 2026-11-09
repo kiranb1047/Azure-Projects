@@ -5,7 +5,7 @@ This project involved setting up a virtual network for virtual machines (VMs) on
 # Project Details
 - The services that were used during the course of this Projects are Powershell, Virtual Networks, Network Security Group, Private DNS Zones and DNS Zones
 
-- Additional information is provided on a seperate document file.
+- Additional information is provided on a separate document file.
 
 # Steps
 
@@ -34,6 +34,6 @@ These projects are hands-on labs I completed while studying for Microsoft's AZ-1
 
 # Conclusion
 
-Succesfully implemented Internal Name Resoultion and External Name resolution for the Machines on the Virtual network to make it easier to remember domain names instead of hard to remember the Internal and External IP addresses.
+Successfully implemented Internal Name Resolution and External Name resolution for the Machines on the Virtual network to make it easier to remember domain names instead of hard to remember the Internal and External IP addresses.
 
 
